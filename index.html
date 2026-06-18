@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Nuraisyah 🐾</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,#302b63,#0f0c29);
+    color:white;
+    font-family:'Quicksand',sans-serif;
+    overflow-x:hidden;
+}
+
+
+/* bintang */
+.star{
+position:fixed;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:blink 3s infinite;
+opacity:.7;
+}
+
+@keyframes blink{
+50%{opacity:.2;}
+}
+
+
+
+/* intro */
+
+section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+padding:30px;
+text-align:center;
+}
+
+
+h1,h2{
+font-family:'Cormorant Garamond',serif;
+letter-spacing:2px;
+}
+
+
+.intro p{
+font-size:20px;
+max-width:600px;
+line-height:1.8;
+opacity:0;
+animation:show 2s forwards;
+}
+
+
+.intro h1{
+font-size:60px;
+margin:20px;
+opacity:0;
+animation:show 2s forwards;
+animation-delay:1s;
+}
+
+
+@keyframes show{
+to{
+opacity:1;
+}
+}
+
+
+button{
+
+background:rgba(255,255,255,.15);
+border:1px solid white;
+padding:15px 30px;
+border-radius:50px;
+color:white;
+cursor:pointer;
+margin-top:30px;
+font-size:16px;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:white;
+color:#302b63;
+}
+
+
+
+/* kucing */
+
+.cat{
+
+position:fixed;
+bottom:40px;
+left:-100px;
+font-size:70px;
+animation:walk 15s linear infinite;
+cursor:pointer;
+z-index:5;
+
+}
+
+
+@keyframes walk{
+
+0%{
+left:-100px;
+}
+
+50%{
+left:80%;
+}
+
+100%{
+left:-100px;
+}
+
+}
+
+
+
+/* cards */
+
+.cards{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+
+.card{
+
+width:260px;
+padding:25px;
+background:rgba(255,255,255,.12);
+border-radius:25px;
+backdrop-filter:blur(10px);
+cursor:pointer;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-15px) rotate(2deg);
+
+}
+
+
+
+.card p{
+
+display:none;
+margin-top:15px;
+line-height:1.6;
+
+}
+
+
+.card.active p{
+display:block;
+}
+
+
+
+/* surat */
+
+
+.letter{
+
+max-width:700px;
+background:#fff8ed;
+color:#333;
+padding:40px;
+border-radius:30px;
+line-height:2;
+font-size:18px;
+box-shadow:0 0 40px rgba(255,255,255,.3);
+
+}
+
+
+.letter h2{
+
+color:#b76e79;
+margin-bottom:20px;
+
+}
+
+
+
+/* ending */
+
+
+.end h1{
+
+font-size:70px;
+animation:pulse 2s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.1);
+}
+
+}
+
+
+
+.heart{
+
+position:fixed;
+font-size:25px;
+animation:fall 5s linear infinite;
+}
+
+
+@keyframes fall{
+
+to{
+transform:translateY(100vh);
+opacity:0;
+}
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="cat" onclick="catClick()">
+🐈
+</div>
+
+
+
+<section class="intro">
+
+
+<p>
+Ada sebuah tempat kecil yang dibuat untuk seseorang...
+</p>
+
+
+<h1>
+Nuraisyah 🐾
+</h1>
+
+
+<p>
+Bukan tempat yang besar,
+tapi tempat kecil yang penuh dengan rasa sayang.
+</p>
+
+
+<button onclick="scrollToLetter()">
+Masuk ke dunia kecil ini 🌙
+</button>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Hal kecil tentang kamu
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+🐾
+<h3>Senyummu</h3>
+<p>
+Sesuatu yang sederhana,
+tapi selalu punya cara membuat hari terasa lebih ringan.
+</p>
+</div>
+
+
+
+<div class="card">
+🌷
+<h3>Kamu</h3>
+<p>
+Aku suka cara kamu menjadi diri sendiri.
+Tetap jadi Nuraisyah yang aku kenal.
+</p>
+</div>
+
+
+
+<div class="card">
+✨
+<h3>Terima kasih</h3>
+<p>
+Karena tanpa sadar kamu sudah membawa banyak warna kecil.
+</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="letter">
+
+
+<div class="letter">
+
+
+<h2>
+Untuk Nuraisyah 🤍
+</h2>
+
+
+<p>
+
+Nuraisyah, aku menulis ini bukan karena aku ingin mengatur hidup kamu.
+
+Aku cuma ingin mengingatkan seseorang yang berarti buat aku.
+
+<br><br>
+
+Tolong tetap jaga hubungan kamu sama Allah ya.
+
+Jangan lupa sholat 5 waktu.
+
+Bukan karena aku ingin kamu sempurna,
+tapi karena aku ingin kamu selalu punya tempat untuk pulang.
+
+<br><br>
+
+Kalau hari kamu berat,
+jangan terlalu keras sama diri sendiri.
+
+Istirahat sebentar juga nggak apa-apa.
+
+<br><br>
+
+Tolong jaga pola makan kamu ya.
+
+Jangan terlalu sering lupa makan karena sibuk.
+
+Aku ingin kamu tetap punya energi untuk mengejar semua hal yang kamu mau.
+
+<br><br>
+
+Dan satu lagi...
+
+Jaga pola tidur kamu.
+
+Jangan terlalu sering memaksa diri sampai lupa kalau kamu juga perlu dijaga.
+
+<br><br>
+
+Aku harap kamu selalu sehat,
+selalu dikelilingi hal baik,
+dan selalu menemukan alasan kecil untuk tersenyum.
+
+<br><br>
+
+Tetap jadi Nuraisyah ya.
+
+Karena versi kamu yang sekarang pun sudah sangat berharga.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="end">
+
+
+<h1>
+N U R A I S Y A H
+</h1>
+
+
+<p>
+Thank you for being you 🐈‍⬛
+</p>
+
+
+<button onclick="explodeLove()">
+pencet ini 🤍
+</button>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+// klik card
+
+document.querySelectorAll(".card")
+.forEach(card=>{
+
+card.onclick=()=>{
+
+card.classList.toggle("active");
+
+}
+
+});
+
+
+
+
+// tombol surat
+
+function scrollToLetter(){
+
+document
+.getElementById("letter")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+
+
+// kucing
+
+function catClick(){
+
+alert(
+"meow 🐾 Nuraisyah jangan lupa senyum hari ini ya"
+);
+
+}
+
+
+
+
+
+// love effect
+
+
+function explodeLove(){
+
+
+for(let i=0;i<50;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.top="-20px";
+
+heart.style.animationDuration=
+(2+Math.random()*4)+"s";
+
+
+document.body.appendChild(heart);
+
+
+}
+
+
+}
+
+
+
+
+// stars
+
+
+for(let i=0;i<80;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDelay=Math.random()*3+"s";
+
+document.body.appendChild(s);
+
+}
+
+
+</script>
+
+
+
+</body>
+</html>
